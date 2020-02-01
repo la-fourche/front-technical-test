@@ -6,3 +6,16 @@ services:
       - 8080:80
     volumes:
      - ./products.json:/data/db.json
+  front:
+    build:
+      context: .
+    expose:
+      - 3000
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/usr/src/app/client
+    links:
+      - api
+    command: npm run dev
+    restart: always
