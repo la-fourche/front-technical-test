@@ -1,6 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
+## SETUP
 
 First, run the development server:
 
@@ -12,19 +10,17 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+examples of a product page :
 
-## Learn More
+http://localhost:3000/product/argalys-vitamines-b12-1-mg-iode-et-selenium-60-gelules-vegan
+http://localhost:3000/product/saveurs-nature-ballotin-d-escargots-praline-enrobes-de-chocolat-noir-140g-bio
 
-To learn more about Next.js, take a look at the following resources:
+example of a category (collection) page :
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+http://localhost:3000/category/sante-bio
 
-You can check out [the Next.js GitHub repository](https://github.com/zeit/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on ZEIT Now
+### Broken images issue
 
-The easiest way to deploy your Next.js app is to use the [ZEIT Now Platform](https://zeit.co/) from the creators of Next.js.
+I used the same static image for all products coz all the image links provided on products.json were broken !
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
