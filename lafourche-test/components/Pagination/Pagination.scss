@@ -1,0 +1,27 @@
+.LinkItem {
+  color: inherit;
+  background-color: transparent;
+  text-decoration: none;
+
+  a {
+    color: inherit;
+    background-color: transparent;
+    text-decoration: none;
+  }
+}
+
+.ActiveLink {
+  color: white;
+  background-color: #42c472;
+  border-radius: 50%;
+}
+
+.Arrow {
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+}
+
+.DisabledArrow {
+  pointer-events: none;
+}

@@ -1,0 +1,59 @@
+.ProductInfoTitle {
+  color: black;
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.ProductVendor {
+  color: #42c472;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.ProductWeight {
+  opacity: 0.5;
+}
+
+.MembersPrice {
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.PublicPrice {
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+.CartCta {
+  background-color: #42c472;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.CartCta:hover {
+  background-color: #fff;
+  border: 1px solid #42c472;
+  color: #42c472;
+}
+
+.StockMessage {
+  font-size: 14px;
+}
+
+.ProductAvailable {
+  color: #42c472;
+}
+
+.SoldOut {
+  color: red;
+}
+
+.DescriptionTitle {
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.DescriptionContent {
+  font-weight: 300;
+}
