@@ -1,0 +1,53 @@
+{
+  "name": "front-technical-test",
+  "version": "1.0.0",
+  "description": "## Sujet",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "tslint": "tslint -p . -c tslint.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/la-fourche/front-technical-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/la-fourche/front-technical-test/issues"
+  },
+  "homepage": "https://github.com/la-fourche/front-technical-test#readme",
+  "dependencies": {
+    "bootstrap": "^3.4.1",
+    "isomorphic-unfetch": "^3.0.0",
+    "next": "^9.2.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-js-pagination": "^3.0.3",
+    "react-paginate": "^6.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^13.7.4",
+    "@types/react": "^16.9.22",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "husky": "^4.2.3",
+    "prettier": "^1.19.1",
+    "tslint": "^6.0.0",
+    "tslint-config-airbnb": "^5.11.2",
+    "tslint-react-hooks": "^2.2.1",
+    "typescript": "^3.8.2"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "printWidth": 120
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run tslint"
+    }
+  }
+}
