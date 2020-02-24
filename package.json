@@ -4,9 +4,9 @@
   "description": "## Sujet",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start"
+    "start": "NODE_ENV=production node server.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
   "dependencies": {
     "isomorphic-unfetch": "^3.0.0",
     "next": "^9.2.2",
+    "next-offline": "^5.0.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   }

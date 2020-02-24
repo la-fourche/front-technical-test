@@ -9052,7 +9052,7 @@ Product.getInitialProps = function _callee(_ref) {
 
 /***/ }),
 
-/***/ 1:
+/***/ 3:
 /*!***************************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fproduct%2F%5Bid%5D&absolutePagePath=%2FUsers%2Fmehdi%2FTechnicalTests%2FLaFourche%2Ffront-technical-test%2Fpages%2Fproduct%2F%5Bid%5D.js ***!
   \***************************************************************************************************************************************************************************************/
@@ -9075,5 +9075,5 @@ module.exports = dll_5f137288facb1107b491;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=[id].js.map
