@@ -3,8 +3,7 @@ import fetch from "isomorphic-unfetch";
 import Pagination from "../../components/pagination";
 import CardProduct from "../../components/cardProduct";
 import Layout from "../../components/layout";
-
-const API = "http://localhost:8080";
+import { API_URL } from "../../util/apiAdapter";
 
 const Collection = ({ products, url: { query } }) => {
   return (
@@ -53,7 +52,7 @@ Collection.getInitialProps = async function(context) {
   const { page } = context.query;
 
   const res = await fetch(
-    `${API}/products?_page=${!page ? `0` : page}&_limit=20`
+    `${API_URL}/products?_page=${!page ? `0` : page}&_limit=20`
   );
 
   const products = await res.json();

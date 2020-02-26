@@ -1,7 +1,5 @@
 import Link from "next/link";
-
-const ITEMS_TOTALS = 100;
-const ITEMS_PER_PAGES = 20;
+import { ITEMS_TOTALS, ITEMS_PER_PAGES } from "../constants/mock";
 
 const NB_PAGES = ITEMS_TOTALS / ITEMS_PER_PAGES;
 
