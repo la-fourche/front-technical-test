@@ -7,7 +7,11 @@ const Layout = ({ children }) => {
         <Header />
         {children}
       </div>
-      <style jsx>{`
+      <style jsx global>{`
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+        }
+
         .layout {
           margin-left: auto;
           margin-right: auto;

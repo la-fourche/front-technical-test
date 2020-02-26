@@ -68,6 +68,7 @@ const Pagination = ({ path, currentPage }) => {
 
         .page-item {
           margin: 0 10px;
+          cursor: pointer;
         }
       `}</style>
     </>
