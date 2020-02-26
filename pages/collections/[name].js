@@ -2,35 +2,38 @@ import Link from "next/link";
 import fetch from "isomorphic-unfetch";
 import Pagination from "../../components/pagination";
 import CardProduct from "../../components/cardProduct";
+import Layout from "../../components/layout";
 
 const API = "http://localhost:8080";
 
 const Collection = ({ products, url: { query } }) => {
   return (
     <>
-      <ul className="products-row">
-        {products.map(product => {
-          return (
-            <li key={product.id}>
-              <Link
-                href="/products/[slug]"
-                as={`/products/${product.handle}`}
-                passHref
-              >
-                <CardProduct
-                  img={product.product_image}
-                  title={product.title}
-                  price={product.price}
-                />
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
-      <Pagination
-        path={query.name}
-        currentPage={query?.page ? parseInt(query.page) : 0}
-      />
+      <Layout>
+        <ul className="products-row">
+          {products.map(product => {
+            return (
+              <li key={product.id}>
+                <Link
+                  href="/products/[slug]"
+                  as={`/products/${product.handle}`}
+                  passHref
+                >
+                  <CardProduct
+                    img={product.product_image}
+                    title={product.title}
+                    price={product.price}
+                  />
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+        <Pagination
+          path={query.name}
+          currentPage={query?.page ? parseInt(query.page) : 0}
+        />
+      </Layout>
       <style jsx>{`
         li {
           list-style: none;

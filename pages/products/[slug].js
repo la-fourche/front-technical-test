@@ -1,4 +1,5 @@
 import fetch from "isomorphic-unfetch";
+import Layout from "../../components/layout";
 
 const API = "http://localhost:8080";
 
@@ -16,7 +17,7 @@ const Product = ({ product }) => {
 
   return (
     <>
-      <div>
+      <Layout>
         <img src={product.product_image} />
         <h2>{product.title}</h2>
         <p>{product.price}€</p>
@@ -38,7 +39,7 @@ const Product = ({ product }) => {
             </button>
           )}
         </div>
-      </div>
+      </Layout>
       <style jsx>{`
         .price-notmember {
           text-decoration: line-through;
