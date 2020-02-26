@@ -1,9 +1,8 @@
 import Link from "next/link";
-import fetch from "isomorphic-unfetch";
 import Pagination from "../../components/pagination";
 import CardProduct from "../../components/cardProduct";
 import Layout from "../../components/layout";
-import { API_URL } from "../../util/apiAdapter";
+import { getProducts } from "../../services/products";
 
 const Collection = ({ products, url: { query } }) => {
   return (
@@ -50,12 +49,7 @@ const Collection = ({ products, url: { query } }) => {
 
 Collection.getInitialProps = async function(context) {
   const { page } = context.query;
-
-  const res = await fetch(
-    `${API_URL}/products?_page=${!page ? `0` : page}&_limit=20`
-  );
-
-  const products = await res.json();
+  const products = await getProducts({ page });
 
   return { products };
 };

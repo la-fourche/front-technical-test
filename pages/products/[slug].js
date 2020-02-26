@@ -1,6 +1,5 @@
-import fetch from "isomorphic-unfetch";
 import Layout from "../../components/layout";
-import { API_URL } from "../../util/apiAdapter";
+import { getProduct } from "../../services/products";
 
 const Product = ({ product }) => {
   const handleNotifiedUser = () => {};
@@ -50,8 +49,7 @@ const Product = ({ product }) => {
 
 Product.getInitialProps = async function(context) {
   const { slug } = context.query;
-  const res = await fetch(`${API_URL}/products?handle=${slug}`);
-  const product = await res.json();
+  const product = await getProduct({ slug });
 
   return { product: product[0] };
 };
