@@ -4,7 +4,7 @@ const CardProduct = React.forwardRef(
       <a href={href} onClick={onClick} ref={ref}>
         <div className="card" ref={ref}>
           <div className="product-img">
-            <img src={img} />
+            <img src={img} alt={`img-${title}`} />
           </div>
           <h2>{title}</h2>
           <p>{price}€</p>
