@@ -8,7 +8,7 @@ const Pagination = ({ path, currentPage }) => {
     <>
       <nav className="navigation">
         <ul className="pagination">
-          {currentPage > 0 ? (
+          {currentPage > 1 ? (
             <li className="page-item">
               <Link
                 href={{
@@ -21,17 +21,19 @@ const Pagination = ({ path, currentPage }) => {
               </Link>
             </li>
           ) : null}
-          {[...Array(NB_PAGES).keys()].map(page => {
+          {[...Array(NB_PAGES + 1).keys()].slice(1, NB_PAGES + 1).map(page => {
             return (
               <li key={page} className="page-item">
                 <Link
                   href={{
                     pathname: "/collections/[name]",
-                    query: { page: page + 1 }
+                    query: { page }
                   }}
-                  as={`/collections/${path}?page=${page + 1}`}
+                  as={`/collections/${path}?page=${page}`}
                 >
-                  <p>{page + 1}</p>
+                  <p className={`${currentPage === page && `active-page`}`}>
+                    {page}
+                  </p>
                 </Link>
               </li>
             );
@@ -69,6 +71,10 @@ const Pagination = ({ path, currentPage }) => {
         .page-item {
           margin: 0 10px;
           cursor: pointer;
+        }
+
+        .active-page {
+          font-weight: bold;
         }
       `}</style>
     </>

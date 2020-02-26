@@ -4,7 +4,14 @@ const CardProduct = React.forwardRef(
       <a href={href} onClick={onClick} ref={ref}>
         <div className="card" ref={ref}>
           <div className="product-img">
-            <img src={img} alt={`img-${title}`} />
+            <img
+              src={img}
+              alt={`img-${title}`}
+              onError={({ target }) => {
+                target.src =
+                  "https://cdn.radiofrance.fr/s3/cruiser-production/2019/06/2c4dcdbc-5d49-43c1-a0cc-4650a7ccab09/600x337_download.jpg";
+              }}
+            />
           </div>
           <h2>{title}</h2>
           <p>{price}€</p>

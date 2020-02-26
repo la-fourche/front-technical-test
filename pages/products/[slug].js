@@ -16,7 +16,13 @@ const Product = ({ product }) => {
   return (
     <>
       <Layout>
-        <img src={product.product_image} />
+        <img
+          src={product.product_image}
+          onError={({ target }) => {
+            target.src =
+              "https://cdn.radiofrance.fr/s3/cruiser-production/2019/06/2c4dcdbc-5d49-43c1-a0cc-4650a7ccab09/600x337_download.jpg";
+          }}
+        />
         <h2>{product.title}</h2>
         <p>{product.price}€</p>
         <p>
