@@ -18,6 +18,14 @@ app.prepare().then(() => {
         }
     );
 
+    server.get(
+        ['/product/:productId'], (req, res) => {
+            return app.render(req, res, '/productDetails', {
+                productId: req.params.productId,
+            });
+        }
+    );
+
     server.all('*', (req, res) => {
         return handle(req, res);
     });

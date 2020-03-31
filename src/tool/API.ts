@@ -4,7 +4,7 @@ import {config} from "../const/config";
 
 export default class API {
 
-    static async getProducts(page: number) {
+    static async getAllProducts(page: number) {
 
         const res = await axios(config.productsUrl, {
             method: 'GET',
@@ -21,5 +21,19 @@ export default class API {
         return [];
 
     }
+
+    static async getProduct(productId: string) {
+
+        const res = await axios(config.productsUrl, {
+            method: 'GET',
+            params: {
+                handle: productId,
+            }
+        });
+
+        return res.data;
+
+    }
+
 
 }

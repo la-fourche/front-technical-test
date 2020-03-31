@@ -26,7 +26,7 @@ export default class products extends React.Component<Props> {
 
         const pageIndex = pagePosition - 1;
 
-        const products = await API.getProducts(pageIndex);
+        const products = await API.getAllProducts(pageIndex);
 
         return {
             pageIndex,

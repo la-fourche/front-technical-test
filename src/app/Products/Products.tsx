@@ -1,14 +1,15 @@
 import * as React from "react";
 import Link from 'next/link'
 
-
 import CustomLayout from "../../component/CustomLayout/CustomLayout";
 import Pagination from "../../component/Pagination/Pagination";
 import PaginationItem from "../../component/PaginationItem/PaginationItem";
+import ProductItem from "./ProductItem/ProductItem";
+import {ProductDTO} from "../../model/ProductDTO";
+import Navigation from "../../tool/Navigation";
 
 import "./styles.css"
-import {ProductDTO} from "../../model/ProductDTO";
-import ProductItem from "./ProductItem/ProductItem";
+
 
 interface Props {
     pageIndex: number;
@@ -30,14 +31,19 @@ export default class Products extends React.PureComponent<Props> {
         });
     }
 
-
     renderPaginationItem(i: number) {
 
         const {pageIndex} = this.props;
         const position = i + 1;
 
+
+        const hrefAndAs = Navigation.buildUrlForProductList(position);
+
         return (
-            <Link href={"/products/" + position.toString()} as={"/products/" + position.toString()}>
+            <Link
+                href={hrefAndAs.href}
+                as={hrefAndAs.as}
+            >
                 <a>
                     <PaginationItem
                         label={position.toString()}
@@ -48,8 +54,8 @@ export default class Products extends React.PureComponent<Props> {
         );
     }
 
-
     render() {
+
         return (
             <CustomLayout
                 title={"Collection de produits"}
@@ -65,7 +71,6 @@ export default class Products extends React.PureComponent<Props> {
                         {this.renderProducts()}
 
                     </div>
-
 
                     <div id={"pagination-wrapper"}>
                         <Pagination
