@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -16,6 +16,8 @@
   "license": "ISC",
   "homepage": "https://github.com/dopey2/front-technical-test#readme",
   "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
     "next": "^9.3.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
