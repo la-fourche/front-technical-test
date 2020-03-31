@@ -11,21 +11,20 @@ app.prepare().then(() => {
     const server = express();
 
     server.get(
-        ['/products/:page'], (req, res) => {
-
+        ['/products/:pagePosition'], (req, res) => {
             return app.render(req, res, '/products', {
-                page: req.params.page,
+                pagePosition: req.params.pagePosition,
             });
         }
     );
 
     server.all('*', (req, res) => {
-        return handle(req, res)
+        return handle(req, res);
     });
 
     server.listen(port, err => {
-        if (err) throw err
-        console.log(`> Ready on http://localhost:${port}`)
+        if (err) throw err;
+        console.log(`> Ready on http://localhost:${port}`);
     })
 
 });

@@ -1,31 +1,51 @@
 import * as React from 'react'
 
+import Products from "../src/app/Products/Products";
+import API from "../src/tool/API";
+import {ProductDTO} from "../src/model/ProductDTO";
 
 type Props = {
-    blabla: number
+    pageIndex: number
+    products: ProductDTO[];
 }
 
 interface Query {
-    page: number;
+    pagePosition: string;
 }
 
-export default class Products extends React.Component<Props> {
+
+export default class products extends React.Component<Props> {
 
     static async getInitialProps({query, res}: { query: Query, res: any }) {
 
+        let pagePosition = parseInt(query.pagePosition);
+
+        if(isNaN(pagePosition) || pagePosition < 0){
+            pagePosition = 1;
+        }
+
+        const pageIndex = pagePosition - 1;
+
+        const products = await API.getProducts(pageIndex);
+
         return {
-            blabla: query.page
+            pageIndex,
+            products
         }
     }
 
     render() {
 
-        return (
-           <div>
-               <h1>Hello {this.props.blabla}</h1>
-           </div>
-        )
-    }
+        const {pageIndex, products} = this.props;
 
+        return (
+            <Products
+                pageIndex={pageIndex}
+                products={products}
+            />
+        );
+    }
 }
+
+
 

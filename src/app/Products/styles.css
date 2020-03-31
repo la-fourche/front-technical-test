@@ -1,0 +1,25 @@
+
+#products {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+#title-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+#products-list {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#pagination-wrapper {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
