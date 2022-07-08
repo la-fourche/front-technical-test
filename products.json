@@ -330,8 +330,8 @@
       "inventory_policy": "deny",
       "inventory_management": "sylius",
       "inventory_available": true,
-      "inventory_quantity": 1000,
-      "variants_inventory_count": 1000,
+      "inventory_quantity": 0,
+      "variants_inventory_count": 0,
       "price_ratio": 0.8791208791208791,
       "image": "https://catalog-media.preprod.lafourche.fr/abricots-secs-bruns-de-malatya-b6e42f231c788de283e9e09742363870b898bd1b.jpg",
       "images": [
@@ -647,8 +647,8 @@
       "inventory_policy": "deny",
       "inventory_management": "sylius",
       "inventory_available": true,
-      "inventory_quantity": 1000,
-      "variants_inventory_count": 1000,
+      "inventory_quantity": 0,
+      "variants_inventory_count": 0,
       "price_ratio": 0.9,
       "image": "https://catalog-media.preprod.lafourche.fr/hamac-absorbants-coton-bio-x2-2-blanc-0986558ff008a1c9086ebffb65170c2408e6687c.jpg",
       "images": [
@@ -4159,8 +4159,8 @@
       "inventory_policy": "deny",
       "inventory_management": "sylius",
       "inventory_available": true,
-      "inventory_quantity": 1000,
-      "variants_inventory_count": 1000,
+      "inventory_quantity": 0,
+      "variants_inventory_count": 0,
       "price_ratio": 0.819327731092437,
       "image": "https://catalog-media.preprod.lafourche.fr/if-you-care-allumes-feu-100-naturels-x28-e7c1f57e0ee046d515f9bdbddcbecdae191227e5.jpg",
       "images": [
@@ -5139,8 +5139,8 @@
       "inventory_policy": "deny",
       "inventory_management": "sylius",
       "inventory_available": true,
-      "inventory_quantity": 1000,
-      "variants_inventory_count": 1000,
+      "inventory_quantity": 0,
+      "variants_inventory_count": 0,
       "price_ratio": 0.7987421383647798,
       "image": "https://catalog-media.preprod.lafourche.fr/amandes-blanches-en-poudre-despagne-8fdd0dab95d3a25966b326970da5d4f31f58d0df.jpg",
       "images": [
